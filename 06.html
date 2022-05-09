@@ -5,6 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="css/reset.css" rel="stylesheet">
+    <style>
+        .gnb{width: 1000px;height: 110px;margin:auto;position: relative;}
+        .depth1{width: 200px;float: left}
+        .depth1>a{display: block;;height: 110px;line-height: 110px;font-size: 22px;color:#333;text-align: center;position: relative;}
+        .depth1>a::after{content:'';display: block;width: 0px;height: 3px;background-color: #900;position: absolute;bottom:0;left:50%;transform: translate(-50%);}
+        .depth1:hover>a::after{width: 40px;transition: width .5s;}
+        .subbox{position: absolute;left:0;top:110px;width:1000px;height: 80px;line-height: 80px;border-top:1px solid #ccc;border-bottom:1px solid #ccc;background-color: #fff;display: none;}
+        .subbox>a{float: left;font-size: 18px;margin-left:10px;margin-right:100px;color:#900;display: block;height: 80px;line-height: 80px;position:relative}
+        .subbox>a::after{content:'';display: block;background:url(img/subArr.png) no-repeat;width: 14px;height: 15px;position: absolute;right:-45px;top:32.5px}
+        .subbox>.depth2{float: left;}
+        .subbox>.depth2>li{float: left;margin-right:80px;}
+        .depth1:hover>.subbox{display: block;}
+
+    </style>
 </head>
 <body>
     <ul class="gnb">
